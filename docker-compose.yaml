@@ -1,7 +1,7 @@
 services:
   runner:
     restart: always
-    image: kirazero17runner:latest
+    image: customdockerrunner:latest
     build:
       context: .
       args:

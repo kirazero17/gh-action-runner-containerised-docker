@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMG_NAME="kirazero17runner"
+IMG_NAME="customdockerrunner"
 IMG_TAG="latest"
 
 if [[ ! -z "$(docker image ls | grep "${IMG_NAME}" | grep "${IMG_TAG}")" ]]
