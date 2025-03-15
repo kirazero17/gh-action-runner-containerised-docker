@@ -1,0 +1,28 @@
+services:
+  runner:
+    restart: always
+    image: kirazero17runner:latest
+    build:
+      context: .
+      args:
+        RUNNER_VERSION: '2.322.0'
+        KUBE_VERSION: '1.32.0'
+        ARCH: 'amd64'
+        DOCKER_HOST: '172.18.0.1' # change this to suit your subnet
+    networks:
+      - devnet # edit the name of the network
+    env_file:
+      - "gh-vars.env"
+      - "gh-token.env" # Create gh-token.env in the same folder as this compose file
+      # with the content: GH_ACCESS_TOKEN=ghp_<something>
+
+networks:
+  devnet:
+    name: anyname # you can edit this
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+          ip_range: 172.18.0.0/24
+          gateway: 172.18.0.1

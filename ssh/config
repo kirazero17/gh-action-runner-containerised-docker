@@ -1,0 +1,5 @@
+Host dockerhost
+    HostName 172.18.0.1
+    User anyusername
+    IdentityFile /home/docker/.ssh/keys/docker2host
+    StrictHostKeyChecking no
