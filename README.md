@@ -1,4 +1,4 @@
-# gh-action-runner-containerised
+# Building Docker images when running containerised GitHub Actions
  Containerised GH action runner that connect to Docker on the host
 
 ---
