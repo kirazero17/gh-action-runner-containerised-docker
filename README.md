@@ -1,4 +1,4 @@
-# Building Docker images when running containerised GitHub Actions
+# Building Docker images when running GitHub Actions
  Containerised GH action runner that connect to Docker on the host
 
 ---
@@ -58,7 +58,7 @@ docker context use remote
 
 Well done, but here's come the next problems.
 
-## It's not as straightforward as you initially think
+## It's not as straightforward as you initially thought
 
 The Actions workflows should be non-interactive. However, switching to the remote context does not make the Docker CLI automatically logged into the remote server. You must be logged in and out for each and every commands. If you use the password-base login method, you will have to enter it every time a command is executed. Mamma mia, non va bene !
 
