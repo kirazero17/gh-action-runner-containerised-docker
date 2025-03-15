@@ -48,7 +48,7 @@ RUN cd /home/docker \
     && install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl \
     && rm /home/docker/kubectl
 
-# SSH config
+# SSH config - you can edit the file
 COPY ./ssh/config /home/docker/config
 RUN mkdir -p /home/docker/.ssh/ \
     && cat /home/docker/config >> /home/docker/.ssh/config \

@@ -1,5 +1,5 @@
 Host dockerhost
-    HostName 172.18.0.1
-    User anyusername
+    HostName 172.18.0.1 # edit this to suit your docker subnet
+    User anyusername # edit this to fit your username on the host
     IdentityFile /home/docker/.ssh/keys/docker2host
     StrictHostKeyChecking no
